@@ -208,7 +208,7 @@ export default function Home() {
               // { name: "Gift Boxes", image: "/images/gift-boxes.avif" },
               { name: "Corrugation Boxes", image: "/images/corrugation-boxes.jpg" },
               { name: "Mono Cartons", image: "/images/mono-cartons.jpg" },
-              { name: "Pamphlets", image: "/images/pamphlets.webp" },
+              { name: "Pamphlets", image: "/images/pamphlets.jpg" },
               { name: "Sticker Labels", image: "/images/sticker-labels.jpg" },
               { name: "Paper Bags", image: "/images/paper-bags.webp" },
               { name: "Visiting Cards", image: "/images/visiting-cards.png" },

@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
 export default function Services() {
   return (
@@ -82,24 +83,34 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Rigid Boxes", desc: "Premium rigid packaging for luxury products" },
-              { name: "Gift Boxes", desc: "Elegant gift packaging with custom designs" },
-              { name: "Corrugation Boxes", desc: "Durable shipping and storage boxes" },
-              { name: "Mono Cartons", desc: "Single-color professional carton packaging" },
-              { name: "Top + Bottom Boxes", desc: "Two-piece box solutions for retail" },
-              { name: "Card Samples", desc: "Print samples and color proofs" },
-              { name: "Pamphlets & Brochures", desc: "Multi-page marketing collateral" },
-              { name: "Sticker Labels", desc: "Custom printed labels and stickers" },
-              { name: "Shredded Paper", desc: "Eco-friendly protective packaging" },
-              { name: "Tags", desc: "Product and hang tags" },
-              { name: "Paper Bags", desc: "Branded paper bags for retail" },
-              { name: "Butter Paper", desc: "Premium wrapping and tissue options" },
-              { name: "Visiting Cards", desc: "Professional business card printing" },
-              { name: "Ads Banner Printing", desc: "Large format promotional banners" },
+              { name: "Rigid Boxes", desc: "Premium rigid packaging for luxury products", image: "/images/rigid-boxes.webp" },
+              { name: "Gift Boxes", desc: "Elegant gift packaging with custom designs", image: "/images/gift-boxes.avif" },
+              { name: "Corrugation Boxes", desc: "Durable shipping and storage boxes", image: "/images/corrugation-boxes.jpg" },
+              { name: "Mono Cartons", desc: "Single-color professional carton packaging", image: "/images/mono-cartons.jpg" },
+              { name: "Top + Bottom Boxes", desc: "Two-piece box solutions for retail", image: "/images/top-bottom-boxes.jpg" },
+              { name: "Card Samples", desc: "Print samples and color proofs", image: "/images/whatsapp-image-2.jpeg" },
+              { name: "Pamphlets & Brochures", desc: "Multi-page marketing collateral", image: "/images/pamphlets.webp" },
+              { name: "Sticker Labels", desc: "Custom printed labels and stickers", image: "/images/sticker-labels.jpg" },
+              { name: "Shredded Paper", desc: "Eco-friendly protective packaging", image: "/images/shredded-paper.jpg" },
+              { name: "Tags", desc: "Product and hang tags", image: "/images/tags.avif" },
+              { name: "Paper Bags", desc: "Branded paper bags for retail", image: "/images/paper-bags.webp" },
+              { name: "Butter Paper", desc: "Premium wrapping and tissue options", image: "/images/butter-paper.jpg" },
+              { name: "Visiting Cards", desc: "Professional business card printing", image: "/images/visiting-cards.png" },
+              { name: "Ads Banner Printing", desc: "Large format promotional banners", image: "/images/ads-banner-printing.png" },
             ].map((product, i) => (
-              <div key={i} className="p-6 rounded-xl bg-white border border-gray-200 hover-lift group">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-600 transition-colors">{product.name}</h3>
-                <p className="text-gray-600">{product.desc}</p>
+              <div key={i} className="rounded-xl bg-white border border-gray-200 hover-lift group overflow-hidden">
+                <div className="relative h-48 w-full bg-gray-100">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-600 transition-colors">{product.name}</h3>
+                  <p className="text-gray-600">{product.desc}</p>
+                </div>
               </div>
             ))}
           </div>

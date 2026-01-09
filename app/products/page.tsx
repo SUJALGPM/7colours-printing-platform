@@ -6,32 +6,32 @@ export default function Products() {
   const products = [
     {
       title: "Printing Equipment in Action",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/flexo-printing-system.jpeg",
       category: "Equipment",
     },
     {
       title: "Advanced Printing Press",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/digital-printing-press.jpeg",
       category: "Equipment",
     },
     {
       title: "Professional Print Samples",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/whatsapp-image-1.jpeg",
       category: "Samples",
     },
     {
       title: "Large Format Printing",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/whatsapp-image-2.jpeg",
       category: "Printing",
     },
     {
       title: "Digital Print Production",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/whatsapp-image-3.jpeg",
       category: "Equipment",
     },
     {
       title: "Complete Printing Setup",
-      image: "/images/whatsapp-20image-202026-01-05-20at-2011.jpeg",
+      image: "/images/digital-printing-press.jpeg",
       category: "Facility",
     },
   ]

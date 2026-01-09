@@ -50,7 +50,7 @@ export default function Home() {
             <div className="animate-slide-in-right hidden lg:block">
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/whatsapp-20image-202026-01-05-20at-2011.jpeg"
+                  src="/images/whatsapp-image-1.jpeg"
                   alt="Flexographic printing machine in operation"
                   fill
                   className="object-cover"
@@ -187,23 +187,28 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
             {[
-              "Rigid Boxes",
-              "Gift Boxes",
-              "Corrugation Boxes",
-              "Mono Cartons",
-              "Pamphlets",
-              "Sticker Labels",
-              "Paper Bags",
-              "Visiting Cards",
+              { name: "Rigid Boxes", image: "/images/rigid-boxes.webp" },
+              { name: "Gift Boxes", image: "/images/gift-boxes.avif" },
+              { name: "Corrugation Boxes", image: "/images/corrugation-boxes.jpg" },
+              { name: "Mono Cartons", image: "/images/mono-cartons.jpg" },
+              { name: "Pamphlets", image: "/images/pamphlets.webp" },
+              { name: "Sticker Labels", image: "/images/sticker-labels.jpg" },
+              { name: "Paper Bags", image: "/images/paper-bags.webp" },
+              { name: "Visiting Cards", image: "/images/visiting-cards.png" },
             ].map((product, i) => (
               <div
                 key={i}
                 className="p-6 rounded-lg border border-gray-200 text-center hover-lift cursor-pointer group bg-white"
               >
-                <div className="w-full h-32 bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg mb-4 flex items-center justify-center group-hover:from-cyan-50 group-hover:to-magenta-50 transition-colors">
-                  <span className="text-3xl">📦</span>
+                <div className="w-full h-32 bg-white rounded-lg mb-4 flex items-center justify-center overflow-hidden relative">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-contain p-2"
+                  />
                 </div>
-                <p className="font-semibold text-gray-800">{product}</p>
+                <p className="font-semibold text-gray-800">{product.name}</p>
               </div>
             ))}
           </div>

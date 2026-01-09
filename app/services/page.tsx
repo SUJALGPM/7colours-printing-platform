@@ -83,8 +83,8 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Rigid Boxes", desc: "Premium rigid packaging for luxury products", image: "/images/rigid-boxes.webp" },
-              { name: "Gift Boxes", desc: "Elegant gift packaging with custom designs", image: "/images/gift-boxes.avif" },
+              // { name: "Rigid Boxes", desc: "Premium rigid packaging for luxury products", image: "/images/rigid-boxes.webp" },
+              // { name: "Gift Boxes", desc: "Elegant gift packaging with custom designs", image: "/images/gift-boxes.avif" },
               { name: "Corrugation Boxes", desc: "Durable shipping and storage boxes", image: "/images/corrugation-boxes.jpg" },
               { name: "Mono Cartons", desc: "Single-color professional carton packaging", image: "/images/mono-cartons.jpg" },
               { name: "Top + Bottom Boxes", desc: "Two-piece box solutions for retail", image: "/images/top-bottom-boxes.jpg" },

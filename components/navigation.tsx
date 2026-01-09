@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 
@@ -13,8 +14,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 via-magenta-500 to-yellow-400 flex items-center justify-center text-white font-bold text-sm">
-              7C
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-md">
+              <Image
+                src="/images/logo.jpeg"
+                alt="7 Colours Logo"
+                fill
+                className="object-cover"
+              />
             </div>
             <span className="hidden sm:inline font-bold text-lg bg-gradient-to-r from-cyan-600 via-magenta-600 to-yellow-500 bg-clip-text text-transparent">
               7 Colours

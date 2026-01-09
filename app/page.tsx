@@ -90,55 +90,72 @@ export default function Home() {
       </section>
 
       {/* Equipment Showcase Section Added new section showcasing actual equipment */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4">State-of-the-Art Equipment</h2>
-          <p className="text-center text-gray-600 text-lg mb-12">Advanced machinery for premium quality results</p>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/background-image.jpeg"
+            alt="Printing machinery background"
+            fill
+            className="object-cover"
+            quality={100}
+          />
+          <div className="absolute inset-0 bg-gray-900/90" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-4 text-white">State-of-the-Art Equipment</h2>
+          <p className="text-center text-gray-300 text-lg mb-12">Advanced machinery for premium quality results</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             {/* Digital Printing Equipment */}
-            <div className="rounded-2xl overflow-hidden shadow-xl hover-lift">
-              <Image
-                src="/images/digital-printing-press.jpeg"
-                alt="Advanced digital printing press with color management system"
-                width={600}
-                height={400}
-                className="w-full h-96 object-cover"
-              />
-              <div className="p-6 bg-white">
-                <h3 className="text-2xl font-bold mb-2">Digital Printing Press</h3>
-                <p className="text-gray-600">High-precision color management with advanced printing technology</p>
+            <div className="rounded-2xl overflow-hidden shadow-2xl hover-lift bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="relative h-72">
+                <Image
+                  src="/images/digital-printing-press.jpeg"
+                  alt="Advanced digital printing press with color management system"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-white">Digital Printing Press</h3>
+                <p className="text-gray-200">High-precision color management with advanced printing technology</p>
               </div>
             </div>
 
             {/* Flexo Printing in Action */}
-            <div className="rounded-2xl overflow-hidden shadow-xl hover-lift">
-              <Image
-                src="/images/flexo-printing-system.jpeg"
-                alt="Flexographic printing with color ink management"
-                width={600}
-                height={400}
-                className="w-full h-96 object-cover"
-              />
-              <div className="p-6 bg-white">
-                <h3 className="text-2xl font-bold mb-2">Flexo Printing System</h3>
-                <p className="text-gray-600">Color-precise ink cartridge system for vibrant packaging prints</p>
+            <div className="rounded-2xl overflow-hidden shadow-2xl hover-lift bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="relative h-72">
+                <Image
+                  src="/images/flexo-printing-system.jpeg"
+                  alt="Flexographic printing with color ink management"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-white">Flexo Printing System</h3>
+                <p className="text-gray-200">Color-precise ink cartridge system for vibrant packaging prints</p>
               </div>
             </div>
           </div>
 
           {/* Quality Control */}
-          <div className="rounded-2xl overflow-hidden shadow-xl hover-lift">
-            <Image
-              src="/images/whatsapp-image-2.jpeg"
-              alt="Color samples and quality control prints"
-              width={800}
-              height={400}
-              className="w-full h-80 object-cover"
-            />
-            <div className="p-6 bg-white">
-              <h3 className="text-2xl font-bold mb-2">Color Precision & Quality Control</h3>
-              <p className="text-gray-600">Extensive color sampling and quality verification for every print job</p>
+          <div className="rounded-2xl overflow-hidden shadow-2xl hover-lift bg-white/10 backdrop-blur-sm border border-white/20">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="relative h-72 md:h-full min-h-[300px]">
+                <Image
+                  src="/images/whatsapp-image-2.jpeg"
+                  alt="Color samples and quality control prints"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-2 text-white">Color Precision & Quality Control</h3>
+                <p className="text-gray-200">Extensive color sampling and quality verification for every print job to ensure your brand colors are perfect every time.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -187,14 +204,16 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
             {[
-              { name: "Rigid Boxes", image: "/images/rigid-boxes.webp" },
-              { name: "Gift Boxes", image: "/images/gift-boxes.avif" },
+              // { name: "Rigid Boxes", image: "/images/rigid-boxes.webp" },
+              // { name: "Gift Boxes", image: "/images/gift-boxes.avif" },
               { name: "Corrugation Boxes", image: "/images/corrugation-boxes.jpg" },
               { name: "Mono Cartons", image: "/images/mono-cartons.jpg" },
               { name: "Pamphlets", image: "/images/pamphlets.webp" },
               { name: "Sticker Labels", image: "/images/sticker-labels.jpg" },
               { name: "Paper Bags", image: "/images/paper-bags.webp" },
               { name: "Visiting Cards", image: "/images/visiting-cards.png" },
+              { name: "Shredded Paper", image: "/images/shredded-paper.jpg" },
+              { name: "Ads Banner Printing", image: "/images/ads-banner-printing.png" },
             ].map((product, i) => (
               <div
                 key={i}
